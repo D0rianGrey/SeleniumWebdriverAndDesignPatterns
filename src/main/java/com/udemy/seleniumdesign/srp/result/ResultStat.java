@@ -1,12 +1,13 @@
-package com.udemy.seleniumdesign.srp;
+package com.udemy.seleniumdesign.srp.result;
 
+import com.udemy.seleniumdesign.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ResultStat extends AbstractComponent {
 
-    @FindBy(id = "resultStats")
+    @FindBy(id = "mBMHK")
     private WebElement stat;
 
     public ResultStat(WebDriver driver) {

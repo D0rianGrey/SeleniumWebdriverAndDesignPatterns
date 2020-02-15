@@ -1,9 +1,9 @@
-package com.udemy.seleniumdesign.srp;
+package com.udemy.seleniumdesign.srp.common;
 
+import com.udemy.seleniumdesign.srp.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -12,7 +12,7 @@ public class SearchSuggestion extends AbstractComponent {
 
     private WebDriverWait webDriverWait;
 
-    @FindBy(css = "li.sbct")
+    @FindBy(xpath = "//li[@class='sbct']")
     private List<WebElement> suggestions;
 
     public SearchSuggestion(final WebDriver driver) {
@@ -26,6 +26,7 @@ public class SearchSuggestion extends AbstractComponent {
 
     @Override
     public boolean isDisplayed() {
-        return this.webDriverWait.until((driver -> this.suggestions.size() > 5));
+        //return this.webDriverWait.until((driver -> this.suggestions.size() > 5));
+        return this.suggestions.size() > 5;
     }
 }
