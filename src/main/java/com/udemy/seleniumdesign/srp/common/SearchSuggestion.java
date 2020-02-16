@@ -24,6 +24,6 @@ public class SearchSuggestion extends AbstractComponent {
 
     @Override
     public boolean isDisplayed() {
-        return this.wait.until((driver -> this.suggestions.size() > 5)); // wait from super constructor in abstract component
+        return this.wait.until(driver -> this.suggestions.size() > 5); // wait from super constructor in abstract component
     }
 }
