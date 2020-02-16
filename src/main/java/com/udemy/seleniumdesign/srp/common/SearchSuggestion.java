@@ -10,8 +10,6 @@ import java.util.List;
 
 public class SearchSuggestion extends AbstractComponent {
 
-    private WebDriverWait webDriverWait;
-
     @FindBy(xpath = "//li[@class='sbct']")
     private List<WebElement> suggestions;
 
@@ -26,7 +24,6 @@ public class SearchSuggestion extends AbstractComponent {
 
     @Override
     public boolean isDisplayed() {
-        //return this.webDriverWait.until((driver -> this.suggestions.size() > 5));
-        return this.suggestions.size() > 5;
+        return this.wait.until((driver -> this.suggestions.size() > 5)); // wait from super constructor in abstract component
     }
 }
