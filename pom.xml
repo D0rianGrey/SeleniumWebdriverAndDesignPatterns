@@ -34,11 +34,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                    <compilerVersion>13</compilerVersion>
-                    <source>13</source>
-                    <target>13</target>
-                    <testSource>13</testSource>
-                    <testTarget>13</testTarget>
+                    <compilerVersion>14</compilerVersion>
+                    <source>14</source>
+                    <target>14</target>
+                    <testSource>14</testSource>
+                    <testTarget>14</testTarget>
                 </configuration>
             </plugin>
         </plugins>
