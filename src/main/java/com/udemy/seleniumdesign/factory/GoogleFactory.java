@@ -14,7 +14,7 @@ public class GoogleFactory {
     private static final Function<WebDriver, GooglePage> ES = driver -> new GoogleES(driver);
     private static final Map<String, Function<WebDriver, GooglePage>> MAP = new HashMap<>();
 
-    static  {
+    static {
         MAP.put("ENG", ENG);
         MAP.put("FR", FR);
         MAP.put("SA", SA);
